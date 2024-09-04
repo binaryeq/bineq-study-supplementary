@@ -1,0 +1,61 @@
+46,53c46,54
+<       64: goto          93
+<       67: new           #15                 // class java/lang/StringBuilder
+<       70: dup
+<       71: invokespecial #16                 // Method java/lang/StringBuilder."<init>":()V
+<       74: aload         4
+<       76: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<       79: ldc           #18                 // String |
+<       81: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>       64: goto          119
+>       67: aload         4
+>       69: invokestatic  #15                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+>       72: astore        5
+>       74: iconst_1
+>       75: aload         5
+>       77: invokestatic  #15                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+>       80: invokevirtual #16                 // Method java/lang/String.length:()I
+>       83: iadd
+55,62c56,75
+<       85: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<       88: invokevirtual #19                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+<       91: astore        4
+<       93: ldc           #13                 // String java.protocol.handler.pkgs
+<       95: aload         4
+<       97: invokestatic  #20                 // Method java/lang/System.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<      100: pop
+<      101: return
+---
+>       85: invokestatic  #15                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+>       88: invokevirtual #16                 // Method java/lang/String.length:()I
+>       91: iadd
+>       92: new           #17                 // class java/lang/StringBuilder
+>       95: dup_x1
+>       96: swap
+>       97: invokespecial #18                 // Method java/lang/StringBuilder."<init>":(I)V
+>      100: aload         5
+>      102: invokevirtual #19                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>      105: ldc           #20                 // String |
+>      107: invokevirtual #19                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>      110: aload_3
+>      111: invokevirtual #19                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>      114: invokevirtual #21                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+>      117: astore        4
+>      119: ldc           #13                 // String java.protocol.handler.pkgs
+>      121: aload         4
+>      123: invokestatic  #22                 // Method java/lang/System.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>      126: pop
+>      127: return
+67c80
+<        1: invokespecial #21                 // Method java/net/URLStreamHandler."<init>":()V
+---
+>        1: invokespecial #23                 // Method java/net/URLStreamHandler."<init>":()V
+72c85
+<        0: new           #22                 // class com/google/common/jimfs/PathURLConnection
+---
+>        0: new           #24                 // class com/google/common/jimfs/PathURLConnection
+75c88
+<        5: invokespecial #23                 // Method com/google/common/jimfs/PathURLConnection."<init>":(Ljava/net/URL;)V
+---
+>        5: invokespecial #25                 // Method com/google/common/jimfs/PathURLConnection."<init>":(Ljava/net/URL;)V

@@ -1,0 +1,82 @@
+Compiled from "Handler.java"
+public final class com.google.common.jimfs.Handler extends java.net.URLStreamHandler {
+  private static final java.lang.String JAVA_PROTOCOL_HANDLER_PACKAGES;
+
+  static void register();
+    Code:
+       0: ldc           #1                  // class com/google/common/jimfs/Handler
+       2: invokestatic  #2                  // Method register:(Ljava/lang/Class;)V
+       5: return
+
+  static void register(java.lang.Class<? extends java.net.URLStreamHandler>);
+    Code:
+       0: ldc           #3                  // String Handler
+       2: aload_0
+       3: invokevirtual #4                  // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+       6: invokevirtual #5                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       9: invokestatic  #6                  // Method com/google/common/base/Preconditions.checkArgument:(Z)V
+      12: aload_0
+      13: invokevirtual #7                  // Method java/lang/Class.getPackage:()Ljava/lang/Package;
+      16: invokevirtual #8                  // Method java/lang/Package.getName:()Ljava/lang/String;
+      19: astore_1
+      20: aload_1
+      21: bipush        46
+      23: invokevirtual #9                  // Method java/lang/String.lastIndexOf:(I)I
+      26: istore_2
+      27: iload_2
+      28: ifle          35
+      31: iconst_1
+      32: goto          36
+      35: iconst_0
+      36: ldc           #10                 // String package for Handler (%s) must have a parent package
+      38: aload_1
+      39: invokestatic  #11                 // Method com/google/common/base/Preconditions.checkArgument:(ZLjava/lang/String;Ljava/lang/Object;)V
+      42: aload_1
+      43: iconst_0
+      44: iload_2
+      45: invokevirtual #12                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+      48: astore_3
+      49: ldc           #13                 // String java.protocol.handler.pkgs
+      51: invokestatic  #14                 // Method java/lang/System.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+      54: astore        4
+      56: aload         4
+      58: ifnonnull     67
+      61: aload_3
+      62: astore        4
+      64: goto          93
+      67: new           #15                 // class java/lang/StringBuilder
+      70: dup
+      71: invokespecial #16                 // Method java/lang/StringBuilder."<init>":()V
+      74: aload         4
+      76: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      79: ldc           #18                 // String |
+      81: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      84: aload_3
+      85: invokevirtual #17                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      88: invokevirtual #19                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      91: astore        4
+      93: ldc           #13                 // String java.protocol.handler.pkgs
+      95: aload         4
+      97: invokestatic  #20                 // Method java/lang/System.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+     100: pop
+     101: return
+
+  public com.google.common.jimfs.Handler();
+    Code:
+       0: aload_0
+       1: invokespecial #21                 // Method java/net/URLStreamHandler."<init>":()V
+       4: return
+
+  protected java.net.URLConnection openConnection(java.net.URL) throws java.io.IOException;
+    Code:
+       0: new           #22                 // class com/google/common/jimfs/PathURLConnection
+       3: dup
+       4: aload_1
+       5: invokespecial #23                 // Method com/google/common/jimfs/PathURLConnection."<init>":(Ljava/net/URL;)V
+       8: areturn
+
+  protected java.net.InetAddress getHostAddress(java.net.URL);
+    Code:
+       0: aconst_null
+       1: areturn
+}
