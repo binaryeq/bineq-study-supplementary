@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder shows diffs between the disassembly, produced using `javap -c -p`, of 2 copies of the class `com.google.common.jimfs.Handler` from `com.google.jimfs:jimfs:1.2`, one taken from Maven Central (mvnc) and the other from Google Assured Open Source Software (gaoss).
+This folder shows the diff between the disassemblies, produced using `javap -c -p`, of 2 copies of the class `com.google.common.jimfs.Handler` from the Maven project `com.google.jimfs:jimfs:1.2`, one taken from Maven Central (mvnc) and the other from Google Assured Open Source Software (gaoss).
 The two subdirectories contain the original jars from each provider and relevant files extracted from them, for convenience.
 
 - File path within both binary jars: `com/google/common/jimfs/Handler.class`
@@ -15,7 +15,7 @@ The two subdirectories contain the original jars from each provider and relevant
 
 ## Summary of differences
 
-The `Handler.java` source files are identical. Both `MANIFEST.MF` files have `Build-Jdk-Spec: 11`, indicating compilers from the same JDK release. Both `Handler.class` files have major version 51, minor version 0 (JDK 7).
+The `Handler.java` source files are identical. Both `MANIFEST.MF` files have `Build-Jdk-Spec: 11`, indicating compilers from the same JDK release, and differ only in their `Bnd-LastModified` timestamps. Both `Handler.class` files have major version 51, minor version 0 (JDK 7).
 
 The main difference is how line 68 of `Handler.java` is compiled:
 
@@ -25,7 +25,7 @@ The main difference is how line 68 of `Handler.java` is compiled:
 
 While the GAOSS bytecode creates a `StringBuilder` using its default constructor and appends the 3 components to it, the Maven Central version first calls `String.length()` twice, computing the length of the final string in order to call the 1-argument version of the `StringBuilder` constructor. The Maven Central version also redundantly calls `String.valueOf()` 3 times (on values already statically known to be `String`s).
 
-There is also some constant pool reordering affecting the bytecode in the last 3 methods (constructor, `openConnection()`, `getHostAddress()`).
+There is also some constant pool reordering affecting indices used in the bytecode in the last 3 methods (constructor, `openConnection()`, `getHostAddress()`).
 
 ## Obtaining Google AOSS files
 
