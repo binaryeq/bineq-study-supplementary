@@ -1,0 +1,18 @@
+25,30c25,30
+<       29: invokeinterface #20,  1           // InterfaceMethod ch/qos/logback/access/spi/IAccessEvent.getClass:()Ljava/lang/Class;
+<       34: invokevirtual #26                 // Method java/lang/Class.getName:()Ljava/lang/String;
+<       37: invokevirtual #16                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<       40: invokevirtual #32                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+<       43: invokespecial #35                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+<       46: athrow
+---
+>       29: invokevirtual #20                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+>       32: invokevirtual #24                 // Method java/lang/Class.getName:()Ljava/lang/String;
+>       35: invokevirtual #16                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>       38: invokevirtual #30                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+>       41: invokespecial #33                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+>       44: athrow
+36c36
+<        2: checkcast     #21                 // class ch/qos/logback/access/spi/IAccessEvent
+---
+>        2: checkcast     #36                 // class ch/qos/logback/access/spi/IAccessEvent

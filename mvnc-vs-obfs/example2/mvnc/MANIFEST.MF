@@ -1,0 +1,91 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.8
+Build-Jdk-Spec: 20
+Specification-Title: Logback Access Module
+Specification-Version: 1.3
+Specification-Vendor: QOS.ch
+Implementation-Title: Logback Access Module
+Implementation-Version: 1.3.11
+Implementation-Vendor: QOS.ch
+Bundle-Description: logback-access module
+Bundle-DocURL: http://www.qos.ch
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html, http://www.gn
+ u.org/licenses/old-licenses/lgpl-2.1.html
+Bundle-ManifestVersion: 2
+Bundle-Name: Logback Access Module
+Bundle-SymbolicName: ch.qos.logback.access
+Bundle-Vendor: QOS.ch
+Bundle-Version: 1.3.11
+Export-Package: ch.qos.logback.access;version="1.3.11";uses:="ch.qos.log
+ back.access.spi,ch.qos.logback.core.pattern,ch.qos.logback.core.status,
+ javax.servlet.http",ch.qos.logback.access.boolex;version="1.3.11";uses:
+ ="ch.qos.logback.access.spi,ch.qos.logback.core.boolex",ch.qos.logback.
+ access.db.script;version="1.3.11",ch.qos.logback.access.filter;version=
+ "1.3.11";uses:="ch.qos.logback.access.spi,ch.qos.logback.core.filter,ch
+ .qos.logback.core.spi",ch.qos.logback.access.html;version="1.3.11";uses
+ :="ch.qos.logback.access.spi,ch.qos.logback.core.html",ch.qos.logback.a
+ ccess.jetty;version="1.3.11";uses:="ch.qos.logback.access.spi,ch.qos.lo
+ gback.core,ch.qos.logback.core.filter,ch.qos.logback.core.spi,org.eclip
+ se.jetty.server,org.eclipse.jetty.util.component",ch.qos.logback.access
+ .joran;version="1.3.11";uses:="ch.qos.logback.access.spi,ch.qos.logback
+ .core,ch.qos.logback.core.joran,ch.qos.logback.core.joran.spi,ch.qos.lo
+ gback.core.model.processor",ch.qos.logback.access.joran.action;version=
+ "1.3.11";uses:="ch.qos.logback.core.joran.action,ch.qos.logback.core.jo
+ ran.spi,ch.qos.logback.core.model,org.xml.sax",ch.qos.logback.access.mo
+ del;version="1.3.11";uses:="ch.qos.logback.core.model",ch.qos.logback.a
+ ccess.model.processor;version="1.3.11";uses:="ch.qos.logback.access.mod
+ el,ch.qos.logback.core,ch.qos.logback.core.joran.spi,ch.qos.logback.cor
+ e.model,ch.qos.logback.core.model.processor",ch.qos.logback.access.net;
+ version="1.3.11";uses:="ch.qos.logback.access,ch.qos.logback.access.spi
+ ,ch.qos.logback.core,ch.qos.logback.core.boolex,ch.qos.logback.core.hel
+ pers,ch.qos.logback.core.net,ch.qos.logback.core.pattern,ch.qos.logback
+ .core.spi",ch.qos.logback.access.net.server;version="1.3.11";uses:="ch.
+ qos.logback.access.spi,ch.qos.logback.core.net.server,ch.qos.logback.co
+ re.spi",ch.qos.logback.access.pattern;version="1.3.11";uses:="ch.qos.lo
+ gback.access.spi,ch.qos.logback.core,ch.qos.logback.core.pattern,ch.qos
+ .logback.core.spi,ch.qos.logback.core.status",ch.qos.logback.access.ser
+ vlet;version="1.3.11";uses:="javax.servlet,javax.servlet.http",ch.qos.l
+ ogback.access.sift;version="1.3.11";uses:="ch.qos.logback.access.spi,ch
+ .qos.logback.core.joran.spi,ch.qos.logback.core.sift",ch.qos.logback.ac
+ cess.spi;version="1.3.11";uses:="ch.qos.logback.core,ch.qos.logback.cor
+ e.filter,ch.qos.logback.core.spi,javax.servlet.http",ch.qos.logback.acc
+ ess.tomcat;version="1.3.11";uses:="ch.qos.logback.access.spi,ch.qos.log
+ back.core,ch.qos.logback.core.filter,ch.qos.logback.core.spi,ch.qos.log
+ back.core.status,javax.servlet,org.apache.catalina,org.apache.catalina.
+ connector,org.apache.catalina.valves"
+Import-Package: ch.qos.logback.access;version="[1.3,2)",ch.qos.logback.a
+ ccess.boolex;version="[1.3,2)",ch.qos.logback.access.joran;version="[1.
+ 3,2)",ch.qos.logback.access.joran.action;version="[1.3,2)",ch.qos.logba
+ ck.access.model;version="[1.3,2)",ch.qos.logback.access.model.processor
+ ;version="[1.3,2)",ch.qos.logback.access.net;version="[1.3,2)",ch.qos.l
+ ogback.access.pattern;version="[1.3,2)",ch.qos.logback.access.servlet;v
+ ersion="[1.3,2)",ch.qos.logback.access.spi;version="[1.3,2)",org.apache
+ .catalina;resolution:=optional;version="9.0.65",org.apache.catalina.con
+ nector;resolution:=optional;version="9.0.65",org.apache.catalina.valves
+ ;resolution:=optional;version="9.0.65",org.eclipse.jetty.http;resolutio
+ n:=optional;version="9.4.48.v20220622",org.eclipse.jetty.server;resolut
+ ion:=optional;version="9.4.48.v20220622",org.eclipse.jetty.util.compone
+ nt;resolution:=optional;version="9.4.48.v20220622",ch.qos.logback.core;
+ version="[1.3,2)",ch.qos.logback.core.boolex;version="[1.3,2)",ch.qos.l
+ ogback.core.filter;version="[1.3,2)",ch.qos.logback.core.helpers;versio
+ n="[1.3,2)",ch.qos.logback.core.html;version="[1.3,2)",ch.qos.logback.c
+ ore.joran;version="[1.3,2)",ch.qos.logback.core.joran.action;version="[
+ 1.3,2)",ch.qos.logback.core.joran.spi;version="[1.3,2)",ch.qos.logback.
+ core.model;version="[1.3,2)",ch.qos.logback.core.model.processor;versio
+ n="[1.3,2)",ch.qos.logback.core.net;version="[1.3,2)",ch.qos.logback.co
+ re.net.server;version="[1.3,2)",ch.qos.logback.core.net.ssl;version="[1
+ .3,2)",ch.qos.logback.core.pattern;version="[1.3,2)",ch.qos.logback.cor
+ e.pattern.color;version="[1.3,2)",ch.qos.logback.core.pattern.parser;ve
+ rsion="[1.3,2)",ch.qos.logback.core.sift;version="[1.3,2)",ch.qos.logba
+ ck.core.spi;version="[1.3,2)",ch.qos.logback.core.status;version="[1.3,
+ 2)",ch.qos.logback.core.util;version="[1.3,2)",javax.management,javax.s
+ ervlet,javax.servlet.http,org.apache.coyote;resolution:=optional;versio
+ n="[9.0,10)",org.xml.sax,ch.qos.logback.core.rolling;version="[1.3,2)",
+ ch.qos.logback.core.rolling.helper;version="[1.3,2)"
+Originally-Created-By: Apache Maven Bundle Plugin 5.1.8
+Require-Capability: osgi.contract;osgi.contract=JavaServlet;filter:="(&(
+ osgi.contract=JavaServlet)(version=4.0.0))",osgi.ee;filter:="(&(osgi.ee
+ =JavaSE)(version=1.8))",osgi.contract;osgi.contract=JavaServlet;filter:
+ ="(&(osgi.contract=JavaServlet)(version=4.0.0))"
+Tool: Bnd-6.3.1.202206071316
+
