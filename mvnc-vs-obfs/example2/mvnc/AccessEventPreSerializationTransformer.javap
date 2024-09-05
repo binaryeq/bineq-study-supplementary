@@ -1,0 +1,39 @@
+Compiled from "AccessEventPreSerializationTransformer.java"
+public class ch.qos.logback.access.net.AccessEventPreSerializationTransformer implements ch.qos.logback.core.spi.PreSerializationTransformer<ch.qos.logback.access.spi.IAccessEvent> {
+  public ch.qos.logback.access.net.AccessEventPreSerializationTransformer();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public java.io.Serializable transform(ch.qos.logback.access.spi.IAccessEvent);
+    Code:
+       0: aload_1
+       1: instanceof    #7                  // class ch/qos/logback/access/spi/AccessEvent
+       4: ifeq          12
+       7: aload_1
+       8: checkcast     #7                  // class ch/qos/logback/access/spi/AccessEvent
+      11: areturn
+      12: new           #9                  // class java/lang/IllegalArgumentException
+      15: dup
+      16: new           #11                 // class java/lang/StringBuilder
+      19: dup
+      20: invokespecial #13                 // Method java/lang/StringBuilder."<init>":()V
+      23: ldc           #14                 // String Unsupported type
+      25: invokevirtual #16                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      28: aload_1
+      29: invokeinterface #20,  1           // InterfaceMethod ch/qos/logback/access/spi/IAccessEvent.getClass:()Ljava/lang/Class;
+      34: invokevirtual #26                 // Method java/lang/Class.getName:()Ljava/lang/String;
+      37: invokevirtual #16                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      40: invokevirtual #32                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      43: invokespecial #35                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      46: athrow
+
+  public java.io.Serializable transform(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #21                 // class ch/qos/logback/access/spi/IAccessEvent
+       5: invokevirtual #38                 // Method transform:(Lch/qos/logback/access/spi/IAccessEvent;)Ljava/io/Serializable;
+       8: areturn
+}
