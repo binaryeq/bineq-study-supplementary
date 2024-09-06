@@ -3,6 +3,7 @@
 ## Overview
 
 This folder shows the diff between the disassemblies, produced using `javap -c -p`, of 2 copies of the class `com.google.common.jimfs.Handler` from the Maven project `com.google.jimfs:jimfs:1.2`, one taken from Maven Central (mvnc) and the other from Google Assured Open Source Software (gaoss).
+Each `.diff` file is produced using a command of the form `diff gaoss/X mvnc/X > X.diff`.
 The two subdirectories contain the original jars from each provider and relevant files extracted from them, for convenience.
 
 - File path within both binary jars: `com/google/common/jimfs/Handler.class`
