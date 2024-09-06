@@ -2,7 +2,13 @@
 
 ## Overview
 
-This folder shows the diff between the disassemblies, produced using `javap -c -p`, of 2 copies of the class `ch.qos.logback.access.net.AccessEventPreSerializationTransformer` from the Maven project `ch.qos.logback:logback-access:1.3.11`, one taken from Maven Central (mvnc) and the other from Oracle Build-From-Source (obfs).
+This folder shows differences at several equivalence levels between 2 copies of the class `ch.qos.logback.access.net.AccessEventPreSerializationTransformer` from the Maven project `ch.qos.logback:logback-access:1.3.11`, one taken from Maven Central (mvnc) and the other from Oracle Build-From-Source (obfs).
+In particular, it shows that **the main difference is not normalised away by JNorm, even with maximum normalisation turned on.**
+
+- `AccessEventPreSerializationTransformer.javap.diff`: disassemblies (produced using `javap -c -p`, `disassembly` in the paper)
+- `AccessEventPreSerializationTransformer.jnorm.jimple.diff`: Jimple (bytecode normalised using JNorm with default settings, `jnorm` in the paper)
+- `AccessEventPreSerializationTransformer.jnorm2.jimple.diff`: Jimple (bytecode normalised aggressively using JNorm with `-o -n -s -a -p` flags, `jnorm2` in the paper)
+
 The two subdirectories contain the original jars from each provider and relevant files extracted from them, for convenience.
 
 - File path within both binary jars: `ch/qos/logback/access/net/AccessEventPreSerializationTransformer.class`
@@ -27,5 +33,3 @@ The OBFS bytecode calls `getClass()` using an `invokevirtual` instruction, while
 This difference results from [a change made to `javac` in JDK18](https://github.com/openjdk/jdk/pull/5165) to reflect the fact that interfaces do not inherit from `java.lang.Object`, but instead have "mirrors" of the public methods of `java.lang.Object` ([JLS 9.2](https://docs.oracle.com/javase/specs/jls/se18/html/jls-9.html#jls-9.2)). Since `IAccessEvent` is an interface, calling `event.getClass()` is technically calling the mirror method on the interface, not the method on `java.lang.Object`.
 
 There is also some constant pool reordering affecting indices used in the remaining bytecode.
-
-**Note: This difference is not normalised away by JNorm**, either at the default settings (`jnorm` in the paper) or with maximum normalisation turned on (using `-o -n -s -a -p` flags, `jnorm2` in the paper).

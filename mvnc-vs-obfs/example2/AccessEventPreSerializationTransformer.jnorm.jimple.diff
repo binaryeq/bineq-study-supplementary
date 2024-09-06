@@ -1,0 +1,4 @@
+47c47
+<         $r4 = interfaceinvoke r0.<ch.qos.logback.access.spi.IAccessEvent: java.lang.Class getClass()>();
+---
+>         $r4 = virtualinvoke r0.<java.lang.Object: java.lang.Class getClass()>();

@@ -1,0 +1,4 @@
+25c25
+< v4 = interfaceinvoke v1.<ch.qos.logback.access.spi.IAccessEvent: java.lang.Class getClass()>();
+---
+> v4 = virtualinvoke v1.<java.lang.Object: java.lang.Class getClass()>();
