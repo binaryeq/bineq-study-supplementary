@@ -1,0 +1,77 @@
+public class ch.qos.logback.access.net.AccessEventPreSerializationTransformer extends java.lang.Object implements ch.qos.logback.core.spi.PreSerializationTransformer
+{
+
+    public void <init>()
+    {
+        ch.qos.logback.access.net.AccessEventPreSerializationTransformer r0;
+
+        r0 := @this: ch.qos.logback.access.net.AccessEventPreSerializationTransformer;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public java.io.Serializable transform(ch.qos.logback.access.spi.IAccessEvent)
+    {
+        ch.qos.logback.access.net.AccessEventPreSerializationTransformer r9;
+        java.lang.IllegalArgumentException $r1;
+        ch.qos.logback.access.spi.IAccessEvent r0;
+        java.lang.StringBuilder $r2, $r3, $r6;
+        java.lang.Class $r4;
+        java.lang.String $r5, $r7;
+        ch.qos.logback.access.spi.AccessEvent $r8;
+        boolean $z0;
+
+        r9 := @this: ch.qos.logback.access.net.AccessEventPreSerializationTransformer;
+
+        r0 := @parameter0: ch.qos.logback.access.spi.IAccessEvent;
+
+        $z0 = r0 instanceof ch.qos.logback.access.spi.AccessEvent;
+
+        if $z0 == 0 goto label1;
+
+        $r8 = (ch.qos.logback.access.spi.AccessEvent) r0;
+
+        return $r8;
+
+     label1:
+        $r1 = new java.lang.IllegalArgumentException;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unsupported type ");
+
+        $r4 = interfaceinvoke r0.<ch.qos.logback.access.spi.IAccessEvent: java.lang.Class getClass()>();
+
+        $r5 = virtualinvoke $r4.<java.lang.Class: java.lang.String getName()>();
+
+        $r6 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r1.<java.lang.IllegalArgumentException: void <init>(java.lang.String)>($r7);
+
+        throw $r1;
+    }
+
+    public volatile java.io.Serializable transform(java.lang.Object)
+    {
+        ch.qos.logback.access.net.AccessEventPreSerializationTransformer r0;
+        java.lang.Object r1;
+        ch.qos.logback.access.spi.IAccessEvent $r2;
+        java.io.Serializable $r3;
+
+        r0 := @this: ch.qos.logback.access.net.AccessEventPreSerializationTransformer;
+
+        r1 := @parameter0: java.lang.Object;
+
+        $r2 = (ch.qos.logback.access.spi.IAccessEvent) r1;
+
+        $r3 = virtualinvoke r0.<ch.qos.logback.access.net.AccessEventPreSerializationTransformer: java.io.Serializable transform(ch.qos.logback.access.spi.IAccessEvent)>($r2);
+
+        return $r3;
+    }
+}
