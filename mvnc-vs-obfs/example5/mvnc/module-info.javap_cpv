@@ -1,0 +1,80 @@
+Classfile /home/wtwhite/code/bineq-study-supplementary/mvnc-vs-obfs/example5/mvnc/module-info.class
+  Last modified 9/09/2024; size 627 bytes
+  SHA-256 checksum 396897ee094942b782a533e070d6d863000a03a00642d01a19354c089c9b32d0
+  Compiled from "module-info.java"
+module jakarta.ws.rs@3.1.0
+  minor version: 0
+  major version: 55
+  flags: (0x8000) ACC_MODULE
+  this_class: #1                          // "module-info"
+  super_class: #0
+  interfaces: 0, fields: 0, methods: 0, attributes: 3
+Constant pool:
+   #1 = Class              #21            // "module-info"
+   #2 = Utf8               SourceFile
+   #3 = Utf8               module-info.java
+   #4 = Utf8               Module
+   #5 = Module             #22            // "jakarta.ws.rs"
+   #6 = Utf8               3.1.0
+   #7 = Module             #23            // "java.base"
+   #8 = Utf8               11.0.2
+   #9 = Module             #24            // "jakarta.xml.bind"
+  #10 = Utf8               3.0.1
+  #11 = Module             #25            // "java.logging"
+  #12 = Package            #26            // jakarta/ws/rs
+  #13 = Package            #27            // jakarta/ws/rs/client
+  #14 = Package            #28            // jakarta/ws/rs/container
+  #15 = Package            #29            // jakarta/ws/rs/core
+  #16 = Package            #30            // jakarta/ws/rs/ext
+  #17 = Package            #31            // jakarta/ws/rs/sse
+  #18 = Class              #32            // jakarta/ws/rs/client/ClientBuilder
+  #19 = Class              #33            // jakarta/ws/rs/ext/RuntimeDelegate
+  #20 = Class              #35            // jakarta/ws/rs/sse/SseEventSource$Builder
+  #21 = Utf8               module-info
+  #22 = Utf8               jakarta.ws.rs
+  #23 = Utf8               java.base
+  #24 = Utf8               jakarta.xml.bind
+  #25 = Utf8               java.logging
+  #26 = Utf8               jakarta/ws/rs
+  #27 = Utf8               jakarta/ws/rs/client
+  #28 = Utf8               jakarta/ws/rs/container
+  #29 = Utf8               jakarta/ws/rs/core
+  #30 = Utf8               jakarta/ws/rs/ext
+  #31 = Utf8               jakarta/ws/rs/sse
+  #32 = Utf8               jakarta/ws/rs/client/ClientBuilder
+  #33 = Utf8               jakarta/ws/rs/ext/RuntimeDelegate
+  #34 = Class              #38            // jakarta/ws/rs/sse/SseEventSource
+  #35 = Utf8               jakarta/ws/rs/sse/SseEventSource$Builder
+  #36 = Utf8               Builder
+  #37 = Utf8               InnerClasses
+  #38 = Utf8               jakarta/ws/rs/sse/SseEventSource
+{
+}
+SourceFile: "module-info.java"
+Module:
+  #5,0                                    // "jakarta.ws.rs"
+  #6                                      // 3.1.0
+  3                                       // requires
+    #7,8000                                 // "java.base" ACC_MANDATED
+    #8                                      // 11.0.2
+    #9,40                                   // "jakarta.xml.bind" ACC_STATIC_PHASE
+    #10                                     // 3.0.1
+    #11,0                                   // "java.logging"
+    #8                                      // 11.0.2
+  6                                       // exports
+    #12,0                                   // jakarta/ws/rs
+    #13,0                                   // jakarta/ws/rs/client
+    #14,0                                   // jakarta/ws/rs/container
+    #15,0                                   // jakarta/ws/rs/core
+    #16,0                                   // jakarta/ws/rs/ext
+    #17,0                                   // jakarta/ws/rs/sse
+  1                                       // opens
+    #15,0                                   // jakarta/ws/rs/core to ... 1
+      #9                                      // ... to "jakarta.xml.bind"
+  3                                       // uses
+    #18                                     // jakarta/ws/rs/client/ClientBuilder
+    #19                                     // jakarta/ws/rs/ext/RuntimeDelegate
+    #20                                     // jakarta/ws/rs/sse/SseEventSource$Builder
+  0                                       // provides
+InnerClasses:
+  public static abstract #36= #20 of #34; // Builder=class jakarta/ws/rs/sse/SseEventSource$Builder of class jakarta/ws/rs/sse/SseEventSource

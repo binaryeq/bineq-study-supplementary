@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1708940019841
+Build-Id: 02/26/2024 09:32 AM
+Build-Jdk: 11.0.22
+Built-By: root
+Bundle-Description: Jakarta RESTful Web Services API (JAX-RS)
+Bundle-DocURL: https://www.eclipse.org/org/foundation/
+Bundle-License: http://www.eclipse.org/legal/epl-2.0, https://www.gnu.
+ org/software/classpath/license.html
+Bundle-ManifestVersion: 2
+Bundle-Name: Jakarta RESTful WS API
+Bundle-SymbolicName: jakarta.ws.rs-api
+Bundle-Vendor: Eclipse Foundation
+Bundle-Version: 3.1.0
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: jakarta.ws.rs;version="3.1.0";uses:="jakarta.ws.rs.cor
+ e,javax.net.ssl",jakarta.ws.rs.ext;version="3.1.0";uses:="jakarta.ws.
+ rs,jakarta.ws.rs.core",jakarta.ws.rs.container;version="3.1.0";uses:=
+ "jakarta.ws.rs.core",jakarta.ws.rs.client;version="3.1.0";uses:="jaka
+ rta.ws.rs,jakarta.ws.rs.core,javax.net.ssl",jakarta.ws.rs.sse;version
+ ="3.1.0";uses:="jakarta.ws.rs.client,jakarta.ws.rs.core",jakarta.ws.r
+ s.core;version="3.1.0";uses:="jakarta.ws.rs,jakarta.xml.bind.annotati
+ on,jakarta.xml.bind.annotation.adapters,javax.xml.namespace"
+Extension-Name: jakarta.ws.rs
+Implementation-Version: 3.1.0
+Import-Package: jakarta.ws.rs;version="[3.1,4)",jakarta.ws.rs.client;v
+ ersion="[3.1,4)",jakarta.ws.rs.core;version="[3.1,4)",jakarta.ws.rs.e
+ xt;version="[3.1,4)",jakarta.xml.bind.annotation;version="[4.0,5)";re
+ solution:=optional,jakarta.xml.bind.annotation.adapters;version="[4.0
+ ,5)";resolution:=optional,javax.net.ssl,javax.xml.namespace
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Vendor: Eclipse Foundation
+Specification-Version: 3.1
+Tool: Bnd-5.1.1.202006162103
+
