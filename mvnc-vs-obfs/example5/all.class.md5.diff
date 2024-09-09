@@ -1,0 +1,16 @@
+1c1
+< cefe982bbef012c7ae1a684d0a94404c  jar/module-info.class
+---
+> 00b107b24cb0ddb0f72a00790a3c4a24  jar/module-info.class
+13a14
+> 3cab9410348e047f73ff882033de43a0  jar/jakarta/ws/rs/sse/package-info.class
+36a38
+> b03322fda5d3ba495add4f7df240cb15  jar/jakarta/ws/rs/container/package-info.class
+52a55
+> f11b5c5660814779be2fcbd098c6e01b  jar/jakarta/ws/rs/client/package-info.class
+68a72
+> ce03b22c997e67ec996a3d964c42ef6d  jar/jakarta/ws/rs/package-info.class
+89a94
+> 553c08f17a28601e3f2e1073c9c9549f  jar/jakarta/ws/rs/core/package-info.class
+142a148
+> cf354ed5aa08b1f5ef257b79779caa07  jar/jakarta/ws/rs/ext/package-info.class

@@ -1,0 +1,28 @@
+1,3c1,3
+< Classfile /home/wtwhite/code/bineq-study-supplementary/mvnc-vs-obfs/example5/mvnc/module-info.class
+<   Last modified 9/09/2024; size 627 bytes
+<   SHA-256 checksum 396897ee094942b782a533e070d6d863000a03a00642d01a19354c089c9b32d0
+---
+> Classfile /home/wtwhite/code/bineq-study-supplementary/mvnc-vs-obfs/example5/obfs/module-info.class
+>   Last modified 9/09/2024; size 628 bytes
+>   SHA-256 checksum 36c7f0480e4aff21ea84eda0460281052ede1a03c50236bb5314cd4c6d3c6e48
+20c20
+<    #8 = Utf8               11.0.2
+---
+>    #8 = Utf8               11.0.22
+22c22
+<   #10 = Utf8               3.0.1
+---
+>   #10 = Utf8               4.0.0
+59c59
+<     #8                                      // 11.0.2
+---
+>     #8                                      // 11.0.22
+61c61
+<     #10                                     // 3.0.1
+---
+>     #10                                     // 4.0.0
+63c63
+<     #8                                      // 11.0.2
+---
+>     #8                                      // 11.0.22

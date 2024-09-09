@@ -1,0 +1,36 @@
+2,5c2,5
+< Bnd-LastModified: 1646083755769
+< Build-Id: 02/28/2022 09:28 PM
+< Build-Jdk: 11.0.2
+< Built-By: jenkins
+---
+> Bnd-LastModified: 1708940019841
+> Build-Id: 02/26/2024 09:32 AM
+> Build-Jdk: 11.0.22
+> Built-By: root
+17,24c17,24
+< Export-Package: jakarta.ws.rs.sse;version="3.1.0";uses:="jakarta.ws.rs
+<  .client,jakarta.ws.rs.core",jakarta.ws.rs.core;version="3.1.0";uses:=
+<  "jakarta.ws.rs,jakarta.xml.bind.annotation,jakarta.xml.bind.annotatio
+<  n.adapters,javax.xml.namespace",jakarta.ws.rs;version="3.1.0";uses:="
+<  jakarta.ws.rs.core,javax.net.ssl",jakarta.ws.rs.container;version="3.
+<  1.0";uses:="jakarta.ws.rs.core",jakarta.ws.rs.ext;version="3.1.0";use
+<  s:="jakarta.ws.rs,jakarta.ws.rs.core",jakarta.ws.rs.client;version="3
+<  .1.0";uses:="jakarta.ws.rs,jakarta.ws.rs.core,javax.net.ssl"
+---
+> Export-Package: jakarta.ws.rs;version="3.1.0";uses:="jakarta.ws.rs.cor
+>  e,javax.net.ssl",jakarta.ws.rs.ext;version="3.1.0";uses:="jakarta.ws.
+>  rs,jakarta.ws.rs.core",jakarta.ws.rs.container;version="3.1.0";uses:=
+>  "jakarta.ws.rs.core",jakarta.ws.rs.client;version="3.1.0";uses:="jaka
+>  rta.ws.rs,jakarta.ws.rs.core,javax.net.ssl",jakarta.ws.rs.sse;version
+>  ="3.1.0";uses:="jakarta.ws.rs.client,jakarta.ws.rs.core",jakarta.ws.r
+>  s.core;version="3.1.0";uses:="jakarta.ws.rs,jakarta.xml.bind.annotati
+>  on,jakarta.xml.bind.annotation.adapters,javax.xml.namespace"
+29,31c29,31
+<  xt;version="[3.1,4)",jakarta.xml.bind.annotation;version="[3.0,4)";re
+<  solution:=optional,jakarta.xml.bind.annotation.adapters;version="[3.0
+<  ,4)";resolution:=optional,javax.net.ssl,javax.xml.namespace
+---
+>  xt;version="[3.1,4)",jakarta.xml.bind.annotation;version="[4.0,5)";re
+>  solution:=optional,jakarta.xml.bind.annotation.adapters;version="[4.0
+>  ,5)";resolution:=optional,javax.net.ssl,javax.xml.namespace

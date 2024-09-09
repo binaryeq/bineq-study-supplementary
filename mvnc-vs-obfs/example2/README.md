@@ -6,9 +6,10 @@ This folder shows differences at several equivalence levels between 2 copies of 
 In particular, it shows that **the main difference is not normalised away by JNorm, even with maximum normalisation turned on.**
 
 Each `.diff` file is produced using a command of the form `diff mvnc/X obfs/X > X.diff`:
-- `AccessEventPreSerializationTransformer.javap.diff`: disassemblies (produced using `javap -c -p`, `disassembly` in the paper)
+- `AccessEventPreSerializationTransformer.javap.diff`: disassemblies (produced using `javap -c -p`, `disassembled` in the paper)
 - `AccessEventPreSerializationTransformer.jnorm.jimple.diff`: Jimple (bytecode normalised using JNorm with default settings, `jnorm` in the paper)
 - `AccessEventPreSerializationTransformer.jnorm2.jimple.diff`: Jimple (bytecode normalised aggressively using JNorm with `-o -n -s -a -p` flags, `jnorm2` in the paper)
+- `MANIFEST.MF.diff`: manifests
 
 The two subdirectories contain the original jars from each provider and relevant files extracted from them, for convenience.
 
@@ -17,7 +18,7 @@ The two subdirectories contain the original jars from each provider and relevant
 - Maven Central source jar URL: https://repo1.maven.org/maven2/ch/qos/logback/logback-access/1.3.11/logback-access-1.3.11-sources.jar
 - Oracle Build-From-Source binary jar URL: https://github.com/binaryeq/bfs-dataset/blob/main/maven-artifacts/ch/qos/logback/logback-access/1.3.11/logback-access-1.3.11.jar
 - Oracle Build-From-Source source jar URL: https://github.com/binaryeq/bfs-dataset/blob/main/maven-artifacts/ch/qos/logback/logback-access/1.3.11/logback-access-1.3.11-sources.jar
-- `*.md5` files are at the same URLs with `.md5` appended
+- `*.md5` files are at the same URLs with `.md5` appended for mvnc; these were generated locally for obfs
 - `MANIFEST.MF` files are extracted from the respective binary jars
 
 ## Summary of differences
