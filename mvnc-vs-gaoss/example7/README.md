@@ -26,8 +26,9 @@ Surprisingly, in addition to the files missing in gaoss, gaoss contains **two co
 (It is not clear that this is a valid use of the zip format.)
 The list of duplicates in `groovy-2.5.23.jar.filelist.dupes` was produced using `sort < groovy-2.5.23.jar.filelist | uniq -c | grep -v ' 1 ' > groovy-2.5.23.jar.filelist.dupes`.
 
-For all but 3 of these 409 duplicate filenames, both copies have the same CRC (and thus likely the same content).
-But there are 3 files, listed in `groovy-2.5.23.jar.filelist.dupes.unequal`, that appear multiple times with different CRCs, all of which are shown in `groovy-2.5.23.jar.filelist.dupes.unequal.detail`.
+For 406 of these 409 duplicate filenames, both copies have the same CRC (and thus likely the same content).
+But there are **3 files that appear multiple times with different CRCs**.
+These are listed in `groovy-2.5.23.jar.filelist.dupes.unequal`, with details on all 6 involved files shown in `groovy-2.5.23.jar.filelist.dupes.unequal.detail`.
 
 These files were produced as follows:
 
