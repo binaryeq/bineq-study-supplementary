@@ -6,7 +6,6 @@ This folder shows the difference in the sets of class files included in the bina
 Each `.diff` file is produced using a command of the form `diff gaoss/X mvnc/X > X.diff`.
 The two subdirectories contain the original jars from each provider and relevant files extracted from them, for convenience.
 
-- File path within both binary jars: `com/google/common/jimfs/Handler.class`
 - Maven Central binary jar URL: https://repo1.maven.org/maven2/org/codehaus/groovy/groovy/2.5.23/groovy-2.5.23.jar
 - Maven Central source jar URL: https://repo1.maven.org/maven2/org/codehaus/groovy/groovy/2.5.23/groovy-2.5.23-sources.jar
 - Google AOSS binary jar path: `org/codehaus/groovy/groovy/2.5.23/groovy-2.5.23.jar`
