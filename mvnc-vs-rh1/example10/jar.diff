@@ -1,0 +1,466 @@
+diff -r mvnc/jar/META-INF/MANIFEST.MF rh1/jar/META-INF/MANIFEST.MF
+2,6d1
+< Created-By: Apache Maven Bundle Plugin 5.1.9
+< Build-Jdk-Spec: 21
+< Specification-Title: Apache Commons IO
+< Specification-Version: 2.15
+< Specification-Vendor: The Apache Software Foundation
+8,9c3,5
+< Implementation-Version: 2.15.1
+< Implementation-Vendor: The Apache Software Foundation
+---
+> Bundle-Description: The Apache Commons IO library contains utility cla
+>  sses, stream implementations, file filters,file comparators, endian t
+>  ransformation classes, and much more.
+11,14d6
+< Bundle-Description: The Apache Commons IO library contains utility class
+<  es, stream implementations, file filters,file comparators, endian trans
+<  formation classes, and much more.
+< Bundle-DocURL: https://commons.apache.org/proper/commons-io/
+16,17d7
+< Bundle-ManifestVersion: 2
+< Bundle-Name: Apache Commons IO
+18a9,13
+> Implementation-Version: 2.15.1.redhat-00001
+> Specification-Vendor: The Apache Software Foundation
+> Bundle-ManifestVersion: 2
+> Specification-Title: Apache Commons IO
+> Bundle-DocURL: https://commons.apache.org/proper/commons-io/
+20,38c15,18
+< Bundle-Version: 2.15.1
+< Export-Package: org.apache.commons.io;version="1.4.9999",org.apache.comm
+<  ons.io.comparator;version="1.4.9999",org.apache.commons.io.filefilter;v
+<  ersion="1.4.9999",org.apache.commons.io.input;version="1.4.9999",org.ap
+<  ache.commons.io.output;version="1.4.9999",org.apache.commons.io.build;v
+<  ersion="2.15.1",org.apache.commons.io.channels;version="2.15.1",org.apa
+<  che.commons.io.charset;version="2.15.1",org.apache.commons.io.file;vers
+<  ion="2.15.1",org.apache.commons.io.file.attribute;version="2.15.1",org.
+<  apache.commons.io.file.spi;version="2.15.1",org.apache.commons.io.funct
+<  ion;version="2.15.1",org.apache.commons.io.input.buffer;version="2.15.1
+<  ",org.apache.commons.io.monitor;version="2.15.1",org.apache.commons.io.
+<  serialization;version="2.15.1",org.apache.commons.io;version="2.15.1",o
+<  rg.apache.commons.io.comparator;version="2.15.1",org.apache.commons.io.
+<  filefilter;version="2.15.1",org.apache.commons.io.input;version="2.15.1
+<  ",org.apache.commons.io.output;version="2.15.1"
+< Import-Package: sun.nio.ch;resolution:=optional,sun.misc;resolution:=opt
+<  ional
+< Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=N
+<  OTICE.txt
+---
+> Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+>  =NOTICE.txt
+> Import-Package: sun.nio.ch;resolution:=optional,sun.misc;resolution:=o
+>  ptional
+41c21,43
+< Multi-Release: true
+---
+> Implementation-Vendor: The Apache Software Foundation
+> Export-Package: org.apache.commons.io;version="1.4.9999",org.apache.co
+>  mmons.io.comparator;version="1.4.9999",org.apache.commons.io.filefilt
+>  er;version="1.4.9999",org.apache.commons.io.input;version="1.4.9999",
+>  org.apache.commons.io.output;version="1.4.9999",org.apache.commons.io
+>  .build;version="2.15.1.redhat-00001",org.apache.commons.io.channels;v
+>  ersion="2.15.1.redhat-00001",org.apache.commons.io.charset;version="2
+>  .15.1.redhat-00001",org.apache.commons.io.file;version="2.15.1.redhat
+>  -00001",org.apache.commons.io.file.attribute;version="2.15.1.redhat-0
+>  0001",org.apache.commons.io.file.spi;version="2.15.1.redhat-00001",or
+>  g.apache.commons.io.function;version="2.15.1.redhat-00001",org.apache
+>  .commons.io.input.buffer;version="2.15.1.redhat-00001",org.apache.com
+>  mons.io.monitor;version="2.15.1.redhat-00001",org.apache.commons.io.s
+>  erialization;version="2.15.1.redhat-00001",org.apache.commons.io;vers
+>  ion="2.15.1.redhat-00001",org.apache.commons.io.comparator;version="2
+>  .15.1.redhat-00001",org.apache.commons.io.filefilter;version="2.15.1.
+>  redhat-00001",org.apache.commons.io.input;version="2.15.1.redhat-0000
+>  1",org.apache.commons.io.output;version="2.15.1.redhat-00001"
+> Bundle-Name: Apache Commons IO
+> Bundle-Version: 2.15.1.redhat-00001
+> Build-Jdk-Spec: 1.8
+> Created-By: Apache Maven Bundle Plugin 5.1.9
+> Specification-Version: 2.15
+diff -r mvnc/jar/META-INF/maven/commons-io/commons-io/pom.properties rh1/jar/META-INF/maven/commons-io/commons-io/pom.properties
+3c3
+< version=2.15.1
+---
+> version=2.15.1.redhat-00001
+diff -r mvnc/jar/META-INF/maven/commons-io/commons-io/pom.xml rh1/jar/META-INF/maven/commons-io/commons-io/pom.xml
+27c27
+<   <version>2.15.1</version>
+---
+>   <version>2.15.1.redhat-00001</version>
+477,485d476
+<     </plugins>
+<   </build>
+< 
+<   <reporting>
+<     <plugins>
+<       <plugin>
+<         <groupId>org.apache.maven.plugins</groupId>
+<         <artifactId>maven-checkstyle-plugin</artifactId>
+<       </plugin>
+487,503c478,489
+<         <groupId>com.github.spotbugs</groupId>
+<         <artifactId>spotbugs-maven-plugin</artifactId>
+<         <configuration>
+<           <excludeFilterFile>${basedir}/src/conf/spotbugs-exclude-filter.xml</excludeFilterFile>
+<         </configuration>
+<       </plugin>
+<       <plugin>
+<         <groupId>com.github.siom79.japicmp</groupId>
+<         <artifactId>japicmp-maven-plugin</artifactId>
+<         <configuration>
+<           <parameter>
+< 			 <excludes>
+<                <!-- False positive: https://github.com/siom79/japicmp/issues/365 -->
+<                <exclude>org.apache.commons.io.StreamIterator</exclude>
+<              </excludes>
+<           </parameter>
+<         </configuration>
+---
+>         <groupId>org.commonjava.maven.plugins</groupId>
+>         <artifactId>project-sources-maven-plugin</artifactId>
+>         <version>1.0</version>
+>         <executions>
+>           <execution>
+>             <id>project-sources-archive</id>
+>             <phase>initialize</phase>
+>             <goals>
+>               <goal>archive</goal>
+>             </goals>
+>           </execution>
+>         </executions>
+506c492
+<   </reporting>
+---
+>   </build>
+587c573
+<                     <classpath/>
+---
+>                     <classpath />
+603a590,592
+> <!--
+> Modified by POM Manipulation Extension for Maven 4.16 ( SHA: 352ae4a7 )
+> -->
+Only in mvnc/jar/META-INF: versions
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$ByteArrayOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$ByteArrayOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$CharSequenceOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$CharSequenceOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$FileOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$FileOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$InputStreamOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$InputStreamOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$OutputStreamOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$OutputStreamOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$PathOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$PathOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$ReaderOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$ReaderOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$URIOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$URIOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin$WriterOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin$WriterOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOrigin.class and rh1/jar/org/apache/commons/io/build/AbstractOrigin.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractOriginSupplier.class and rh1/jar/org/apache/commons/io/build/AbstractOriginSupplier.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractStreamBuilder.class and rh1/jar/org/apache/commons/io/build/AbstractStreamBuilder.class differ
+Binary files mvnc/jar/org/apache/commons/io/build/AbstractSupplier.class and rh1/jar/org/apache/commons/io/build/AbstractSupplier.class differ
+Binary files mvnc/jar/org/apache/commons/io/ByteOrderMark.class and rh1/jar/org/apache/commons/io/ByteOrderMark.class differ
+Binary files mvnc/jar/org/apache/commons/io/ByteOrderParser.class and rh1/jar/org/apache/commons/io/ByteOrderParser.class differ
+Binary files mvnc/jar/org/apache/commons/io/channels/FileChannels.class and rh1/jar/org/apache/commons/io/channels/FileChannels.class differ
+Binary files mvnc/jar/org/apache/commons/io/charset/CharsetDecoders.class and rh1/jar/org/apache/commons/io/charset/CharsetDecoders.class differ
+Binary files mvnc/jar/org/apache/commons/io/charset/CharsetEncoders.class and rh1/jar/org/apache/commons/io/charset/CharsetEncoders.class differ
+Binary files mvnc/jar/org/apache/commons/io/Charsets.class and rh1/jar/org/apache/commons/io/Charsets.class differ
+Binary files mvnc/jar/org/apache/commons/io/CloseableURLConnection.class and rh1/jar/org/apache/commons/io/CloseableURLConnection.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/AbstractFileComparator.class and rh1/jar/org/apache/commons/io/comparator/AbstractFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/CompositeFileComparator.class and rh1/jar/org/apache/commons/io/comparator/CompositeFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/DefaultFileComparator.class and rh1/jar/org/apache/commons/io/comparator/DefaultFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/DirectoryFileComparator.class and rh1/jar/org/apache/commons/io/comparator/DirectoryFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/ExtensionFileComparator.class and rh1/jar/org/apache/commons/io/comparator/ExtensionFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/LastModifiedFileComparator.class and rh1/jar/org/apache/commons/io/comparator/LastModifiedFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/NameFileComparator.class and rh1/jar/org/apache/commons/io/comparator/NameFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/PathFileComparator.class and rh1/jar/org/apache/commons/io/comparator/PathFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/ReverseFileComparator.class and rh1/jar/org/apache/commons/io/comparator/ReverseFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/comparator/SizeFileComparator.class and rh1/jar/org/apache/commons/io/comparator/SizeFileComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/CopyUtils.class and rh1/jar/org/apache/commons/io/CopyUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/DirectoryWalker$CancelException.class and rh1/jar/org/apache/commons/io/DirectoryWalker$CancelException.class differ
+Binary files mvnc/jar/org/apache/commons/io/DirectoryWalker.class and rh1/jar/org/apache/commons/io/DirectoryWalker.class differ
+Binary files mvnc/jar/org/apache/commons/io/EndianUtils.class and rh1/jar/org/apache/commons/io/EndianUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/AccumulatorPathVisitor.class and rh1/jar/org/apache/commons/io/file/AccumulatorPathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/attribute/FileTimes.class and rh1/jar/org/apache/commons/io/file/attribute/FileTimes.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/CleaningPathVisitor.class and rh1/jar/org/apache/commons/io/file/CleaningPathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/CopyDirectoryVisitor.class and rh1/jar/org/apache/commons/io/file/CopyDirectoryVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$1.class and rh1/jar/org/apache/commons/io/file/Counters$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$AbstractPathCounters.class and rh1/jar/org/apache/commons/io/file/Counters$AbstractPathCounters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$BigIntegerCounter.class and rh1/jar/org/apache/commons/io/file/Counters$BigIntegerCounter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$BigIntegerPathCounters.class and rh1/jar/org/apache/commons/io/file/Counters$BigIntegerPathCounters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$Counter.class and rh1/jar/org/apache/commons/io/file/Counters$Counter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$LongCounter.class and rh1/jar/org/apache/commons/io/file/Counters$LongCounter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$LongPathCounters.class and rh1/jar/org/apache/commons/io/file/Counters$LongPathCounters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$NoopCounter.class and rh1/jar/org/apache/commons/io/file/Counters$NoopCounter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$NoopPathCounters.class and rh1/jar/org/apache/commons/io/file/Counters$NoopPathCounters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters$PathCounters.class and rh1/jar/org/apache/commons/io/file/Counters$PathCounters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/Counters.class and rh1/jar/org/apache/commons/io/file/Counters.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/CountingPathVisitor.class and rh1/jar/org/apache/commons/io/file/CountingPathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/DeleteOption.class and rh1/jar/org/apache/commons/io/file/DeleteOption.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/DeletingPathVisitor.class and rh1/jar/org/apache/commons/io/file/DeletingPathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/DirectoryStreamFilter.class and rh1/jar/org/apache/commons/io/file/DirectoryStreamFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/FilesUncheck.class and rh1/jar/org/apache/commons/io/file/FilesUncheck.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/NoopPathVisitor.class and rh1/jar/org/apache/commons/io/file/NoopPathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/PathFilter.class and rh1/jar/org/apache/commons/io/file/PathFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/PathUtils$1.class and rh1/jar/org/apache/commons/io/file/PathUtils$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/PathUtils$RelativeSortedPaths.class and rh1/jar/org/apache/commons/io/file/PathUtils$RelativeSortedPaths.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/PathUtils.class and rh1/jar/org/apache/commons/io/file/PathUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/PathVisitor.class and rh1/jar/org/apache/commons/io/file/PathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/SimplePathVisitor.class and rh1/jar/org/apache/commons/io/file/SimplePathVisitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/spi/FileSystemProviders.class and rh1/jar/org/apache/commons/io/file/spi/FileSystemProviders.class differ
+Binary files mvnc/jar/org/apache/commons/io/file/StandardDeleteOption.class and rh1/jar/org/apache/commons/io/file/StandardDeleteOption.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileCleaner.class and rh1/jar/org/apache/commons/io/FileCleaner.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileCleaningTracker$Reaper.class and rh1/jar/org/apache/commons/io/FileCleaningTracker$Reaper.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileCleaningTracker$Tracker.class and rh1/jar/org/apache/commons/io/FileCleaningTracker$Tracker.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileCleaningTracker.class and rh1/jar/org/apache/commons/io/FileCleaningTracker.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileDeleteStrategy$ForceFileDeleteStrategy.class and rh1/jar/org/apache/commons/io/FileDeleteStrategy$ForceFileDeleteStrategy.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileDeleteStrategy.class and rh1/jar/org/apache/commons/io/FileDeleteStrategy.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileExistsException.class and rh1/jar/org/apache/commons/io/FileExistsException.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/AbstractFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/AbstractFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/AgeFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/AgeFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/AndFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/AndFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/CanExecuteFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/CanExecuteFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/CanReadFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/CanReadFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/CanWriteFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/CanWriteFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/ConditionalFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/ConditionalFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/DelegateFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/DelegateFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/DirectoryFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/DirectoryFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/EmptyFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/EmptyFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/FalseFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/FalseFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/FileEqualsFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/FileEqualsFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/FileFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/FileFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/FileFilterUtils.class and rh1/jar/org/apache/commons/io/filefilter/FileFilterUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/HiddenFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/HiddenFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/IOFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/IOFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/MagicNumberFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/MagicNumberFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/NameFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/NameFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/NotFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/NotFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/OrFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/OrFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/PathEqualsFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/PathEqualsFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/PathMatcherFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/PathMatcherFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/PathVisitorFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/PathVisitorFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/PrefixFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/PrefixFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/RegexFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/RegexFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/SizeFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/SizeFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/SuffixFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/SuffixFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/SymbolicLinkFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/SymbolicLinkFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/TrueFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/TrueFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/WildcardFileFilter$1.class and rh1/jar/org/apache/commons/io/filefilter/WildcardFileFilter$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/WildcardFileFilter$Builder.class and rh1/jar/org/apache/commons/io/filefilter/WildcardFileFilter$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/WildcardFileFilter.class and rh1/jar/org/apache/commons/io/filefilter/WildcardFileFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/filefilter/WildcardFilter.class and rh1/jar/org/apache/commons/io/filefilter/WildcardFilter.class differ
+Binary files mvnc/jar/org/apache/commons/io/FilenameUtils.class and rh1/jar/org/apache/commons/io/FilenameUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileSystem.class and rh1/jar/org/apache/commons/io/FileSystem.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileSystemUtils.class and rh1/jar/org/apache/commons/io/FileSystemUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/FileUtils.class and rh1/jar/org/apache/commons/io/FileUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/Constants.class and rh1/jar/org/apache/commons/io/function/Constants.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/Erase.class and rh1/jar/org/apache/commons/io/function/Erase.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOBaseStreamAdapter.class and rh1/jar/org/apache/commons/io/function/IOBaseStreamAdapter.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOBaseStream.class and rh1/jar/org/apache/commons/io/function/IOBaseStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOBiConsumer.class and rh1/jar/org/apache/commons/io/function/IOBiConsumer.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOBiFunction.class and rh1/jar/org/apache/commons/io/function/IOBiFunction.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOBinaryOperator.class and rh1/jar/org/apache/commons/io/function/IOBinaryOperator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOComparator.class and rh1/jar/org/apache/commons/io/function/IOComparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOConsumer.class and rh1/jar/org/apache/commons/io/function/IOConsumer.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOFunction.class and rh1/jar/org/apache/commons/io/function/IOFunction.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOIntSupplier.class and rh1/jar/org/apache/commons/io/function/IOIntSupplier.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOIteratorAdapter.class and rh1/jar/org/apache/commons/io/function/IOIteratorAdapter.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOIterator.class and rh1/jar/org/apache/commons/io/function/IOIterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOLongSupplier.class and rh1/jar/org/apache/commons/io/function/IOLongSupplier.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOPredicate.class and rh1/jar/org/apache/commons/io/function/IOPredicate.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOQuadFunction.class and rh1/jar/org/apache/commons/io/function/IOQuadFunction.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IORunnable.class and rh1/jar/org/apache/commons/io/function/IORunnable.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOSpliteratorAdapter.class and rh1/jar/org/apache/commons/io/function/IOSpliteratorAdapter.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOSpliterator.class and rh1/jar/org/apache/commons/io/function/IOSpliterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOStream$1.class and rh1/jar/org/apache/commons/io/function/IOStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOStreamAdapter.class and rh1/jar/org/apache/commons/io/function/IOStreamAdapter.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOStream.class and rh1/jar/org/apache/commons/io/function/IOStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOStreams.class and rh1/jar/org/apache/commons/io/function/IOStreams.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOSupplier.class and rh1/jar/org/apache/commons/io/function/IOSupplier.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOTriConsumer.class and rh1/jar/org/apache/commons/io/function/IOTriConsumer.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOTriFunction.class and rh1/jar/org/apache/commons/io/function/IOTriFunction.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/IOUnaryOperator.class and rh1/jar/org/apache/commons/io/function/IOUnaryOperator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/Uncheck.class and rh1/jar/org/apache/commons/io/function/Uncheck.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/UncheckedIOBaseStream.class and rh1/jar/org/apache/commons/io/function/UncheckedIOBaseStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/UncheckedIOIterator.class and rh1/jar/org/apache/commons/io/function/UncheckedIOIterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/function/UncheckedIOSpliterator.class and rh1/jar/org/apache/commons/io/function/UncheckedIOSpliterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/HexDump.class and rh1/jar/org/apache/commons/io/HexDump.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/AbstractCharacterFilterReader.class and rh1/jar/org/apache/commons/io/input/AbstractCharacterFilterReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/AutoCloseInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/AutoCloseInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/AutoCloseInputStream.class and rh1/jar/org/apache/commons/io/input/AutoCloseInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BOMInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/BOMInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BOMInputStream.class and rh1/jar/org/apache/commons/io/input/BOMInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BoundedInputStream.class and rh1/jar/org/apache/commons/io/input/BoundedInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BoundedReader.class and rh1/jar/org/apache/commons/io/input/BoundedReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BrokenInputStream.class and rh1/jar/org/apache/commons/io/input/BrokenInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BrokenReader.class and rh1/jar/org/apache/commons/io/input/BrokenReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/buffer/CircularBufferInputStream.class and rh1/jar/org/apache/commons/io/input/buffer/CircularBufferInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/buffer/CircularByteBuffer.class and rh1/jar/org/apache/commons/io/input/buffer/CircularByteBuffer.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/buffer/PeekableInputStream.class and rh1/jar/org/apache/commons/io/input/buffer/PeekableInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BufferedFileChannelInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/BufferedFileChannelInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/BufferedFileChannelInputStream.class and rh1/jar/org/apache/commons/io/input/BufferedFileChannelInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ByteBufferCleaner$1.class and rh1/jar/org/apache/commons/io/input/ByteBufferCleaner$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ByteBufferCleaner$Cleaner.class and rh1/jar/org/apache/commons/io/input/ByteBufferCleaner$Cleaner.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ByteBufferCleaner$Java8Cleaner.class and rh1/jar/org/apache/commons/io/input/ByteBufferCleaner$Java8Cleaner.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ByteBufferCleaner$Java9Cleaner.class and rh1/jar/org/apache/commons/io/input/ByteBufferCleaner$Java9Cleaner.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ByteBufferCleaner.class and rh1/jar/org/apache/commons/io/input/ByteBufferCleaner.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharacterFilterReader.class and rh1/jar/org/apache/commons/io/input/CharacterFilterReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharacterSetFilterReader.class and rh1/jar/org/apache/commons/io/input/CharacterSetFilterReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharSequenceInputStream$1.class and rh1/jar/org/apache/commons/io/input/CharSequenceInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharSequenceInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/CharSequenceInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharSequenceInputStream.class and rh1/jar/org/apache/commons/io/input/CharSequenceInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CharSequenceReader.class and rh1/jar/org/apache/commons/io/input/CharSequenceReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CircularInputStream.class and rh1/jar/org/apache/commons/io/input/CircularInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ClassLoaderObjectInputStream.class and rh1/jar/org/apache/commons/io/input/ClassLoaderObjectInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ClosedInputStream.class and rh1/jar/org/apache/commons/io/input/ClosedInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ClosedReader.class and rh1/jar/org/apache/commons/io/input/ClosedReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CloseShieldInputStream.class and rh1/jar/org/apache/commons/io/input/CloseShieldInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CloseShieldReader.class and rh1/jar/org/apache/commons/io/input/CloseShieldReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/CountingInputStream.class and rh1/jar/org/apache/commons/io/input/CountingInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/DemuxInputStream.class and rh1/jar/org/apache/commons/io/input/DemuxInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/InfiniteCircularInputStream.class and rh1/jar/org/apache/commons/io/input/InfiniteCircularInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MarkShieldInputStream.class and rh1/jar/org/apache/commons/io/input/MarkShieldInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MemoryMappedFileInputStream$1.class and rh1/jar/org/apache/commons/io/input/MemoryMappedFileInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MemoryMappedFileInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/MemoryMappedFileInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MemoryMappedFileInputStream.class and rh1/jar/org/apache/commons/io/input/MemoryMappedFileInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream$MessageDigestMaintainingObserver.class and rh1/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream$MessageDigestMaintainingObserver.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream.class and rh1/jar/org/apache/commons/io/input/MessageDigestCalculatingInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestInputStream$1.class and rh1/jar/org/apache/commons/io/input/MessageDigestInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/MessageDigestInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestInputStream$MessageDigestMaintainingObserver.class and rh1/jar/org/apache/commons/io/input/MessageDigestInputStream$MessageDigestMaintainingObserver.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/MessageDigestInputStream.class and rh1/jar/org/apache/commons/io/input/MessageDigestInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/NullInputStream.class and rh1/jar/org/apache/commons/io/input/NullInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/NullReader.class and rh1/jar/org/apache/commons/io/input/NullReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ObservableInputStream$Observer.class and rh1/jar/org/apache/commons/io/input/ObservableInputStream$Observer.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ObservableInputStream.class and rh1/jar/org/apache/commons/io/input/ObservableInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ProxyInputStream.class and rh1/jar/org/apache/commons/io/input/ProxyInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ProxyReader.class and rh1/jar/org/apache/commons/io/input/ProxyReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/QueueInputStream$1.class and rh1/jar/org/apache/commons/io/input/QueueInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/QueueInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/QueueInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/QueueInputStream.class and rh1/jar/org/apache/commons/io/input/QueueInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/RandomAccessFileInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/RandomAccessFileInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/RandomAccessFileInputStream.class and rh1/jar/org/apache/commons/io/input/RandomAccessFileInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReadAheadInputStream$1.class and rh1/jar/org/apache/commons/io/input/ReadAheadInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReadAheadInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/ReadAheadInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReadAheadInputStream.class and rh1/jar/org/apache/commons/io/input/ReadAheadInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReaderInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/ReaderInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReaderInputStream.class and rh1/jar/org/apache/commons/io/input/ReaderInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReversedLinesFileReader$1.class and rh1/jar/org/apache/commons/io/input/ReversedLinesFileReader$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReversedLinesFileReader$Builder.class and rh1/jar/org/apache/commons/io/input/ReversedLinesFileReader$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReversedLinesFileReader$FilePart.class and rh1/jar/org/apache/commons/io/input/ReversedLinesFileReader$FilePart.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/ReversedLinesFileReader.class and rh1/jar/org/apache/commons/io/input/ReversedLinesFileReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/SequenceReader.class and rh1/jar/org/apache/commons/io/input/SequenceReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/SwappedDataInputStream.class and rh1/jar/org/apache/commons/io/input/SwappedDataInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TaggedInputStream.class and rh1/jar/org/apache/commons/io/input/TaggedInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TaggedReader.class and rh1/jar/org/apache/commons/io/input/TaggedReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$1.class and rh1/jar/org/apache/commons/io/input/Tailer$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$Builder.class and rh1/jar/org/apache/commons/io/input/Tailer$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$RandomAccessFileBridge.class and rh1/jar/org/apache/commons/io/input/Tailer$RandomAccessFileBridge.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$RandomAccessResourceBridge.class and rh1/jar/org/apache/commons/io/input/Tailer$RandomAccessResourceBridge.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$Tailable.class and rh1/jar/org/apache/commons/io/input/Tailer$Tailable.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer$TailablePath.class and rh1/jar/org/apache/commons/io/input/Tailer$TailablePath.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/Tailer.class and rh1/jar/org/apache/commons/io/input/Tailer.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TailerListenerAdapter.class and rh1/jar/org/apache/commons/io/input/TailerListenerAdapter.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TailerListener.class and rh1/jar/org/apache/commons/io/input/TailerListener.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TeeInputStream.class and rh1/jar/org/apache/commons/io/input/TeeInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TeeReader.class and rh1/jar/org/apache/commons/io/input/TeeReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/TimestampedObserver.class and rh1/jar/org/apache/commons/io/input/TimestampedObserver.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedBufferedReader$1.class and rh1/jar/org/apache/commons/io/input/UncheckedBufferedReader$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedBufferedReader$Builder.class and rh1/jar/org/apache/commons/io/input/UncheckedBufferedReader$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedBufferedReader.class and rh1/jar/org/apache/commons/io/input/UncheckedBufferedReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterInputStream$1.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterInputStream.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterReader$1.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterReader$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterReader$Builder.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterReader$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UncheckedFilterReader.class and rh1/jar/org/apache/commons/io/input/UncheckedFilterReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnixLineEndingInputStream.class and rh1/jar/org/apache/commons/io/input/UnixLineEndingInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsupportedOperationExceptions.class and rh1/jar/org/apache/commons/io/input/UnsupportedOperationExceptions.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream$1.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedBufferedInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedByteArrayInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedByteArrayInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedByteArrayInputStream.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedByteArrayInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedFilterInputStream$Builder.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedFilterInputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/UnsynchronizedFilterInputStream.class and rh1/jar/org/apache/commons/io/input/UnsynchronizedFilterInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/WindowsLineEndingInputStream.class and rh1/jar/org/apache/commons/io/input/WindowsLineEndingInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/XmlStreamReader$Builder.class and rh1/jar/org/apache/commons/io/input/XmlStreamReader$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/XmlStreamReader.class and rh1/jar/org/apache/commons/io/input/XmlStreamReader.class differ
+Binary files mvnc/jar/org/apache/commons/io/input/XmlStreamReaderException.class and rh1/jar/org/apache/commons/io/input/XmlStreamReaderException.class differ
+Binary files mvnc/jar/org/apache/commons/io/IOCase.class and rh1/jar/org/apache/commons/io/IOCase.class differ
+Binary files mvnc/jar/org/apache/commons/io/IO.class and rh1/jar/org/apache/commons/io/IO.class differ
+Binary files mvnc/jar/org/apache/commons/io/IOExceptionList.class and rh1/jar/org/apache/commons/io/IOExceptionList.class differ
+Binary files mvnc/jar/org/apache/commons/io/IOExceptionWithCause.class and rh1/jar/org/apache/commons/io/IOExceptionWithCause.class differ
+Binary files mvnc/jar/org/apache/commons/io/IOIndexedException.class and rh1/jar/org/apache/commons/io/IOIndexedException.class differ
+Binary files mvnc/jar/org/apache/commons/io/IOUtils.class and rh1/jar/org/apache/commons/io/IOUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/LineIterator.class and rh1/jar/org/apache/commons/io/LineIterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileAlterationListenerAdaptor.class and rh1/jar/org/apache/commons/io/monitor/FileAlterationListenerAdaptor.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileAlterationListener.class and rh1/jar/org/apache/commons/io/monitor/FileAlterationListener.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileAlterationMonitor.class and rh1/jar/org/apache/commons/io/monitor/FileAlterationMonitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileAlterationObserver$1.class and rh1/jar/org/apache/commons/io/monitor/FileAlterationObserver$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileAlterationObserver.class and rh1/jar/org/apache/commons/io/monitor/FileAlterationObserver.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/FileEntry.class and rh1/jar/org/apache/commons/io/monitor/FileEntry.class differ
+Binary files mvnc/jar/org/apache/commons/io/monitor/SerializableFileTime.class and rh1/jar/org/apache/commons/io/monitor/SerializableFileTime.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/AbstractByteArrayOutputStream$InputStreamConstructor.class and rh1/jar/org/apache/commons/io/output/AbstractByteArrayOutputStream$InputStreamConstructor.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/AbstractByteArrayOutputStream.class and rh1/jar/org/apache/commons/io/output/AbstractByteArrayOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/AppendableOutputStream.class and rh1/jar/org/apache/commons/io/output/AppendableOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/AppendableWriter.class and rh1/jar/org/apache/commons/io/output/AppendableWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/BrokenOutputStream.class and rh1/jar/org/apache/commons/io/output/BrokenOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/BrokenWriter.class and rh1/jar/org/apache/commons/io/output/BrokenWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ByteArrayOutputStream.class and rh1/jar/org/apache/commons/io/output/ByteArrayOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ChunkedOutputStream$Builder.class and rh1/jar/org/apache/commons/io/output/ChunkedOutputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ChunkedOutputStream.class and rh1/jar/org/apache/commons/io/output/ChunkedOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ChunkedWriter.class and rh1/jar/org/apache/commons/io/output/ChunkedWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ClosedOutputStream.class and rh1/jar/org/apache/commons/io/output/ClosedOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ClosedWriter.class and rh1/jar/org/apache/commons/io/output/ClosedWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/CloseShieldOutputStream.class and rh1/jar/org/apache/commons/io/output/CloseShieldOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/CloseShieldWriter.class and rh1/jar/org/apache/commons/io/output/CloseShieldWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/CountingOutputStream.class and rh1/jar/org/apache/commons/io/output/CountingOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/DeferredFileOutputStream$1.class and rh1/jar/org/apache/commons/io/output/DeferredFileOutputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/DeferredFileOutputStream$Builder.class and rh1/jar/org/apache/commons/io/output/DeferredFileOutputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/DeferredFileOutputStream.class and rh1/jar/org/apache/commons/io/output/DeferredFileOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/DemuxOutputStream.class and rh1/jar/org/apache/commons/io/output/DemuxOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/FileWriterWithEncoding$1.class and rh1/jar/org/apache/commons/io/output/FileWriterWithEncoding$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/FileWriterWithEncoding$Builder.class and rh1/jar/org/apache/commons/io/output/FileWriterWithEncoding$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/FileWriterWithEncoding.class and rh1/jar/org/apache/commons/io/output/FileWriterWithEncoding.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/FilterCollectionWriter.class and rh1/jar/org/apache/commons/io/output/FilterCollectionWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/LockableFileWriter$Builder.class and rh1/jar/org/apache/commons/io/output/LockableFileWriter$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/LockableFileWriter.class and rh1/jar/org/apache/commons/io/output/LockableFileWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/NullAppendable.class and rh1/jar/org/apache/commons/io/output/NullAppendable.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/NullOutputStream.class and rh1/jar/org/apache/commons/io/output/NullOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/NullPrintStream.class and rh1/jar/org/apache/commons/io/output/NullPrintStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/NullWriter.class and rh1/jar/org/apache/commons/io/output/NullWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ProxyCollectionWriter.class and rh1/jar/org/apache/commons/io/output/ProxyCollectionWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ProxyOutputStream.class and rh1/jar/org/apache/commons/io/output/ProxyOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ProxyWriter.class and rh1/jar/org/apache/commons/io/output/ProxyWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/QueueOutputStream.class and rh1/jar/org/apache/commons/io/output/QueueOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/StringBuilderWriter.class and rh1/jar/org/apache/commons/io/output/StringBuilderWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/TaggedOutputStream.class and rh1/jar/org/apache/commons/io/output/TaggedOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/TaggedWriter.class and rh1/jar/org/apache/commons/io/output/TaggedWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/TeeOutputStream.class and rh1/jar/org/apache/commons/io/output/TeeOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/TeeWriter.class and rh1/jar/org/apache/commons/io/output/TeeWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/ThresholdingOutputStream.class and rh1/jar/org/apache/commons/io/output/ThresholdingOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedAppendable.class and rh1/jar/org/apache/commons/io/output/UncheckedAppendable.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedAppendableImpl.class and rh1/jar/org/apache/commons/io/output/UncheckedAppendableImpl.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterOutputStream$1.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterOutputStream$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterOutputStream$Builder.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterOutputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterOutputStream.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterWriter$1.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterWriter$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterWriter$Builder.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterWriter$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UncheckedFilterWriter.class and rh1/jar/org/apache/commons/io/output/UncheckedFilterWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UnsynchronizedByteArrayOutputStream$Builder.class and rh1/jar/org/apache/commons/io/output/UnsynchronizedByteArrayOutputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/UnsynchronizedByteArrayOutputStream.class and rh1/jar/org/apache/commons/io/output/UnsynchronizedByteArrayOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/WriterOutputStream$Builder.class and rh1/jar/org/apache/commons/io/output/WriterOutputStream$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/WriterOutputStream.class and rh1/jar/org/apache/commons/io/output/WriterOutputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/XmlStreamWriter$1.class and rh1/jar/org/apache/commons/io/output/XmlStreamWriter$1.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/XmlStreamWriter$Builder.class and rh1/jar/org/apache/commons/io/output/XmlStreamWriter$Builder.class differ
+Binary files mvnc/jar/org/apache/commons/io/output/XmlStreamWriter.class and rh1/jar/org/apache/commons/io/output/XmlStreamWriter.class differ
+Binary files mvnc/jar/org/apache/commons/io/RandomAccessFileMode.class and rh1/jar/org/apache/commons/io/RandomAccessFileMode.class differ
+Binary files mvnc/jar/org/apache/commons/io/RandomAccessFiles.class and rh1/jar/org/apache/commons/io/RandomAccessFiles.class differ
+Binary files mvnc/jar/org/apache/commons/io/serialization/ClassNameMatcher.class and rh1/jar/org/apache/commons/io/serialization/ClassNameMatcher.class differ
+Binary files mvnc/jar/org/apache/commons/io/serialization/FullClassNameMatcher.class and rh1/jar/org/apache/commons/io/serialization/FullClassNameMatcher.class differ
+Binary files mvnc/jar/org/apache/commons/io/serialization/RegexpClassNameMatcher.class and rh1/jar/org/apache/commons/io/serialization/RegexpClassNameMatcher.class differ
+Binary files mvnc/jar/org/apache/commons/io/serialization/ValidatingObjectInputStream.class and rh1/jar/org/apache/commons/io/serialization/ValidatingObjectInputStream.class differ
+Binary files mvnc/jar/org/apache/commons/io/serialization/WildcardClassNameMatcher.class and rh1/jar/org/apache/commons/io/serialization/WildcardClassNameMatcher.class differ
+Binary files mvnc/jar/org/apache/commons/io/StandardLineSeparator.class and rh1/jar/org/apache/commons/io/StandardLineSeparator.class differ
+Binary files mvnc/jar/org/apache/commons/io/StreamIterator.class and rh1/jar/org/apache/commons/io/StreamIterator.class differ
+Binary files mvnc/jar/org/apache/commons/io/TaggedIOException.class and rh1/jar/org/apache/commons/io/TaggedIOException.class differ
+Binary files mvnc/jar/org/apache/commons/io/ThreadMonitor.class and rh1/jar/org/apache/commons/io/ThreadMonitor.class differ
+Binary files mvnc/jar/org/apache/commons/io/ThreadUtils.class and rh1/jar/org/apache/commons/io/ThreadUtils.class differ
+Binary files mvnc/jar/org/apache/commons/io/UncheckedIOExceptions.class and rh1/jar/org/apache/commons/io/UncheckedIOExceptions.class differ
