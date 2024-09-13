@@ -7,7 +7,7 @@ Each `.diff` file is produced using a command of the form `diff gaoss/X mvnc/X >
 The two subdirectories contain the original source jars from each provider and relevant files extracted from them, for convenience.
 
 - File path within both source jars: `com/fasterxml/jackson/core/json/PackageVersion.java`
-- Maven Central source jar URL: repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar
+- Maven Central source jar URL: https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar
 - RedHat source jar URL: https://maven.repository.redhat.com/ga/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar
 - `*.md5` files are at the same URLs with `.md5` appended
 - `MANIFEST.MF`, `pom.xml` and `pom.properties` files are extracted from the respective source jars
