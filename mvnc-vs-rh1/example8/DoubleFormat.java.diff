@@ -1,0 +1,12 @@
+366c366
+<         private int maxPrecision = 0;
+---
+>         private int maxPrecision;
+399c399
+<         private boolean groupThousands = false;
+---
+>         private boolean groupThousands;
+408c408
+<         private boolean alwaysIncludeExponent = false;
+---
+>         private boolean alwaysIncludeExponent;
