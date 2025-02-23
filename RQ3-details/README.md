@@ -1,4 +1,4 @@
-# RQ2 Details
+# RQ3 Details
 
 
 ## Bitwise Equality
