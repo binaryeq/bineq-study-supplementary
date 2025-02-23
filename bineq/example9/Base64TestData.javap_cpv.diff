@@ -1,0 +1,118 @@
+1c1
+< Classfile /home/wtwhite/code/bineq-study-supplementary/bineq/example9/1.12/Base64TestData.class
+---
+> Classfile /home/wtwhite/code/bineq-study-supplementary/bineq/example9/1.13/Base64TestData.class
+3c3
+<   SHA-256 checksum 59e56892fa63ca36ba496f069eb8f9c895a1fc5343ee412414ace1d3954cebbe
+---
+>   SHA-256 checksum 5f95bb1f47065f129db3418c85820d64f6f4d3adb69f294d5ac75a2721c0b15b
+32c32
+<    #20 = String             #100          // 123
+---
+>    #20 = String             #100          // 124
+112c112
+<   #100 = Utf8               123
+---
+>   #100 = Utf8               124
+134c134
+<     ConstantValue: String 123
+---
+>     ConstantValue: String 124
+179c179
+<         line 32: 0
+---
+>         line 31: 0
+195c195
+<         line 144: 0
+---
+>         line 143: 0
+270,286c270,286
+<         line 149: 0
+<         line 150: 7
+<         line 151: 11
+<         line 152: 16
+<         line 153: 22
+<         line 154: 27
+<         line 155: 34
+<         line 156: 38
+<         line 158: 46
+<         line 159: 52
+<         line 160: 57
+<         line 161: 66
+<         line 165: 69
+<         line 166: 73
+<         line 165: 76
+<         line 166: 82
+<         line 167: 85
+---
+>         line 148: 0
+>         line 149: 7
+>         line 150: 11
+>         line 151: 16
+>         line 152: 22
+>         line 153: 27
+>         line 154: 34
+>         line 155: 38
+>         line 157: 46
+>         line 158: 52
+>         line 159: 57
+>         line 160: 66
+>         line 164: 69
+>         line 165: 73
+>         line 164: 76
+>         line 165: 82
+>         line 166: 85
+373,381c373,381
+<         line 172: 0
+<         line 173: 11
+<         line 174: 14
+<         line 175: 19
+<         line 177: 21
+<         line 178: 35
+<         line 179: 51
+<         line 180: 57
+<         line 183: 65
+---
+>         line 171: 0
+>         line 172: 11
+>         line 173: 14
+>         line 174: 19
+>         line 176: 21
+>         line 177: 35
+>         line 178: 51
+>         line 179: 57
+>         line 182: 65
+418,420c418,420
+<         line 187: 0
+<         line 188: 7
+<         line 189: 16
+---
+>         line 186: 0
+>         line 187: 7
+>         line 188: 16
+461,465c461,465
+<         line 201: 0
+<         line 202: 8
+<         line 203: 12
+<         line 204: 17
+<         line 205: 34
+---
+>         line 200: 0
+>         line 201: 8
+>         line 202: 12
+>         line 203: 17
+>         line 204: 34
+509,512c509,512
+<         line 216: 0
+<         line 217: 20
+<         line 216: 28
+<         line 219: 34
+---
+>         line 215: 0
+>         line 216: 20
+>         line 215: 28
+>         line 218: 34
+4636c4636
+<         line 89: 0
+---
+>         line 88: 0
