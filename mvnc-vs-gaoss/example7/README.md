@@ -48,6 +48,8 @@ unzip -lv groovy-2.5.23.jar|grep -Ff groovy-2.5.23.jar.filelist.dupes.unequal > 
 `mvnc/org.codehaus.groovy.antlr.GroovySourceToken.javap` was produced using `javap -cp mvnc/groovy-2.5.23.jar org.codehaus.groovy.antlr.GroovySourceToken > mvnc/org.codehaus.groovy.antlr.GroovySourceToken.javap`, and similarly for `gaoss/org.codehaus.groovy.antlr.GroovySourceToken.javap`.
 As their diff `org.codehaus.groovy.antlr.GroovySourceToken.javap.diff` shows, the mvnc version names the shaded class `groovyjarjarantlr.Token` as its superclass, while gaoss names the original class `antlr.Token` as its superclass.
 
+The build metadata specifying the shading can be found [here](https://github.com/groovy/groovy-eclipse/blob/master/base/org.codehaus.groovy30/build.antlr4x#L30).
+
 ## Obtaining Google AOSS files
 
 After first [setting up Google Assured Open Source Software access](https://cloud.google.com/assured-open-source-software/docs/enable) for a [Google Cloud Platform](https://cloud.google.com/) account, and ensuring a valid service account access token is in the file `service-account-access-token`, GAOSS files can be downloaded using the following command, replacing `$P` with the path in question:
