@@ -1,0 +1,4 @@
+2c2
+< public class org.codehaus.groovy.antlr.GroovySourceToken extends antlr.Token implements org.codehaus.groovy.antlr.SourceInfo {
+---
+> public class org.codehaus.groovy.antlr.GroovySourceToken extends groovyjarjarantlr.Token implements org.codehaus.groovy.antlr.SourceInfo {

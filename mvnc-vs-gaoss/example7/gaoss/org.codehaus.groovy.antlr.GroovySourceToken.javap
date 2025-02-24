@@ -1,0 +1,20 @@
+Compiled from "GroovySourceToken.java"
+public class org.codehaus.groovy.antlr.GroovySourceToken extends antlr.Token implements org.codehaus.groovy.antlr.SourceInfo {
+  protected int line;
+  protected java.lang.String text;
+  protected int col;
+  protected int lineLast;
+  protected int colLast;
+  public org.codehaus.groovy.antlr.GroovySourceToken(int);
+  public int getLine();
+  public java.lang.String getText();
+  public void setLine(int);
+  public void setText(java.lang.String);
+  public java.lang.String toString();
+  public int getColumn();
+  public void setColumn(int);
+  public int getLineLast();
+  public void setLineLast(int);
+  public int getColumnLast();
+  public void setColumnLast(int);
+}
