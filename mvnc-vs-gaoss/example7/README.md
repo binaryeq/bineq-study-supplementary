@@ -20,7 +20,7 @@ These file lists were sorted and duplicates were removed using `sort -u < groovy
 All of these files are in top-level directories that appear to result from removing periods from package names.
 One additional file, `META-INF/INDEX.LIST`, is also missing from the gaoss jar.
 
-## Duplicate files in tha Google AOSS jar
+## Duplicate files in the Google AOSS jar
 
 Surprisingly, in addition to the files missing in gaoss, gaoss contains **two copies** of 409 files.
 (It is not clear that this is a valid use of the zip format.)
@@ -42,6 +42,11 @@ sort < groovy-2.5.23.jar.filelist.withcrcs | uniq | cut -c11- | sort | uniq -d >
 # Get the metadata (size, CRC, etc.) for all appearances of these filenames in the zip
 unzip -lv groovy-2.5.23.jar|grep -Ff groovy-2.5.23.jar.filelist.dupes.unequal > groovy-2.5.23.jar.filelist.dupes.unequal.detail
 ```
+
+## Superclass difference
+
+`mvnc/org.codehaus.groovy.antlr.GroovySourceToken.javap` was produced using `javap -cp mvnc/groovy-2.5.23.jar org.codehaus.groovy.antlr.GroovySourceToken > mvnc/org.codehaus.groovy.antlr.GroovySourceToken.javap`, and similarly for `gaoss/org.codehaus.groovy.antlr.GroovySourceToken.javap`.
+As their diff `org.codehaus.groovy.antlr.GroovySourceToken.javap.diff` shows, the mvnc version names the shaded class `groovyjarjarantlr.Token` as its superclass, while gaoss names the original class `antlr.Token` as its superclass.
 
 ## Obtaining Google AOSS files
 
